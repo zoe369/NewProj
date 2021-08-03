@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Sasha_CarModelStoreContainer" CdmEntityContainer="CarEntities">
+    <EntitySetMapping Name="Car">
+      <EntityTypeMapping TypeName="Sasha_CarModel.Car">
+        <MappingFragment StoreEntitySet="Car">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Pret" ColumnName="Pret" />
+          <ScalarProperty Name="An_fabricatie" ColumnName="An fabricatie" />
+          <ScalarProperty Name="Km" ColumnName="Km" />
+          <ScalarProperty Name="Culoare" ColumnName="Culoare" />
+          <ScalarProperty Name="Cutie" ColumnName="Cutie" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
