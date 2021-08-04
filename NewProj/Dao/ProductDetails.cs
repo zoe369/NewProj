@@ -18,20 +18,20 @@ namespace NewProj.Dao
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                CarModel c = new CarModel()
-                {
-                    Car_id = (int)reader["ID"],
-                    Car_marca = (string)reader["Marca"],
-                    Car_model = (string)reader["Model"],
-                    Car_price = (int)reader["Pret"],
-                    Car_image = (string)reader["Image"],
-                    Car_an = (int)reader["An fabricatie"],
-                    Car_km = (int)reader["Km"],
-                    Car_culoare = (string)reader["Culoare"],
-                    Car_cutie = (string)reader["Cutie"]
-                };
-                car.Add(c);
-                Debug.WriteLine(c.Car_id);
+                //CarModel c = new CarModel()
+                //{
+                //    Car_id = (int)reader["ID"],
+                //    Car_marca = (string)reader["Marca"],
+                //    Car_model = (string)reader["Model"],
+                //    Car_price = (int)reader["Pret"],
+                //    Car_image = (string)reader["Image"],
+                //    Car_an = (int)reader["An fabricatie"],
+                //    Car_km = (int)reader["Km"],
+                //    Car_culoare = (string)reader["Culoare"],
+                //    Car_cutie = (string)reader["Cutie"]
+                //};
+                //car.Add(c);
+                //Debug.WriteLine(c.Car_id);
             }
         }
         return car;

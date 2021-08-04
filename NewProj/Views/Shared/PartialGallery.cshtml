@@ -1,6 +1,8 @@
-﻿@using NewProj.Models
-@model NewProj.Models.CarModel
+﻿
+@using NewProj.Models
+@using PagedList.Mvc
 
+@model  PagedList.IPagedList<NewProj.Models.Car>
 <style>
 
     .row.display-flex {
@@ -33,9 +35,9 @@
         <tr style="text-align:center">
             @*<td><img src="~/images/@product.pro_image" /></td>*@
             <td colspan="2" style="border-color:transparent;">
-                <img src="~/images/@product.Car_image" style="width:40%" /><br />
-                <span style="color:#337ab7">@product.Car_marca</span><br />
-                <span style="color:indianred">Description : </span>@product.Car_model<br />
+                <img src="~/images/@product.Image" style="width:40%" /><br />
+                <span style="color:#337ab7">@product.Marca</span><br />
+                <span style="color:indianred">Description : </span>@product.Model<br />
             </td>
         </tr>
         <tr style="text-align:center;color:green;">
@@ -49,13 +51,13 @@
                                 <h5 class="modal-title">Descriere</h5>
                             </div>
                             <div class="modal-body">
-                                <p>Marca: @product.Car_marca</p>
-                                <p>Model: @product.Car_model</p>
-                                <p>Pret: @product.Car_price</p>
-                                <p>An fabricatie: @product.Car_an</p>
-                                <p>Kilometraj: @product.Car_km</p>
-                                <p>Culoare:@product.Car_culoare</p>
-                                <p>Cutie: @product.Car_cutie</p>
+                                <p>Marca: @product.Marca</p>
+                                <p>Model: @product.Model</p>
+                                <p>Pret: @product.Pret</p>
+                                <p>An fabricatie: @product.An_fabricatie</p>
+                                <p>Kilometraj: @product.Km</p>
+                                <p>Culoare:@product.Culoare</p>
+                                <p>Cutie: @product.Cutie</p>
                             </div>
                         </div>
                     </div>
@@ -65,21 +67,27 @@
 
     </table>
 </div> }
+<div class="pagination" style="margin-left: 400px">
 
-} }
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+    of @Model.PageCount   @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+
+</div> } }
 
 
 
     </div>
 </div>
 
-<script>var a = 0;
+<script>
+    var a = 0;
     function increment() {
         a = a + 1;
         document.getElementById("count").innerHTML = a;
 
     }</script>
-<script type="text/javascript">function incrementCookie(pro_id) {
+<script type="text/javascript">
+    function incrementCookie(pro_id) {
 
         if (getCookie(pro_id) == "") {
             document.cookie = pro_id + "=" + 1 + "; Path=/";

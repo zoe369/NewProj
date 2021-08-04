@@ -7,18 +7,14 @@ namespace NewProj.Models
 {
     public class CarModel
     {
-        public int Car_id { get; set; }
-
-        public string Car_marca { get; set; }
-
-        public string Car_model { get; set; }
-
-        public int Car_price { get; set; }
-
-        public string Car_image { get; set; }
-        public int Car_an { get; set; }
-        public int Car_km { get; set; }
-        public string Car_cutie { get; set; }
-        public string Car_culoare { get; set; }
+        public int ID { get; set; }
+        public string Marca { get; set; }
+        public string Model { get; set; }
+        public int Pret { get; set; }
+        public int An_fabricatie { get; set; }
+        public int Km { get; set; }
+        public string Culoare { get; set; }
+        public string Cutie { get; set; }
+        public string Image { get; set; }
     }
 }

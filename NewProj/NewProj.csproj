@@ -144,26 +144,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Car.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Car.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\Car.cs">
-      <DependentUpon>Car.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Car.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Car.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Car1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Car.tt</DependentUpon>
+      <DependentUpon>Carsss.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\CarModel.cs" />
-    <Compile Include="Models\CarsssModel.cs" />
+    <Compile Include="Models\Carsss.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Carsss.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Carsss.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Carsss.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Carsss.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Carsss.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -186,24 +185,24 @@
     <Content Include="Images\bmw3.jpg" />
     <Content Include="Images\kia.jpg" />
     <Content Include="Images\seat.jpg" />
-    <Content Include="Models\Car.Context.tt">
+    <Content Include="Models\Carsss.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Car.edmx</DependentUpon>
-      <LastGenOutput>Car.Context.cs</LastGenOutput>
+      <DependentUpon>Carsss.edmx</DependentUpon>
+      <LastGenOutput>Carsss.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Car.tt">
+    <Content Include="Models\Carsss.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Car.edmx</DependentUpon>
-      <LastGenOutput>Car1.cs</LastGenOutput>
+      <DependentUpon>Carsss.edmx</DependentUpon>
+      <LastGenOutput>Carsss.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Car.edmx">
+    <EntityDeploy Include="Models\Carsss.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Car.Designer.cs</LastGenOutput>
+      <LastGenOutput>Carsss.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Car.edmx.diagram">
-      <DependentUpon>Car.edmx</DependentUpon>
+    <Content Include="Models\Carsss.edmx.diagram">
+      <DependentUpon>Carsss.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -235,7 +234,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Marius\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
